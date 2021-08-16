@@ -1,6 +1,6 @@
 # Spotify to Soulseek
 
-A nodejs script that will allow you to automatically download entire spotify playlists through soulseek.
+A Nodejs script that will allow you to automatically download entire Spotify playlists through Soulseek. At the moment it will only download songs with a minimum bitrate of 320kbps. 
 
 ## Setup
 

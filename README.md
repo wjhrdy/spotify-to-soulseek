@@ -20,4 +20,11 @@ Usage:
 ```
 node index.js spotify_playlist_url
 ```
+
+
+**[Quick note as pointed out here](https://github.com/nlspnsgen/spotify-to-soulseek/issues/1#issuecomment-1146498844):**
+You don't want to use the full playlist URL, just the last section of the URL before the parameters. For example, if my playlist's URL is: `https://open.spotify.com/playlist/abcdefghijklmo?si=1234567` then the command I would want to use would be:
+```
+node index.js abcdefghijklmo
+```
 Enjoy! 

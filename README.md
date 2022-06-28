@@ -18,6 +18,8 @@ SLSK_PASS=your_soulseek_password
 
 Usage:
 ```
+npm install
+
 node index.js spotify_playlist_url
 ```
 

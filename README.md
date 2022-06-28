@@ -29,4 +29,7 @@ You don't want to use the full playlist URL, just the last section of the URL be
 ```
 node index.js abcdefghijklmo
 ```
-Enjoy! 
+
+### Disclaimer
+
+The authors of this project are in no way responsible for any copyright infringements caused by using this code or software using this project. There are many legitimate use-cases for this code outside of piracy. This project was written with the intention to be used for such legal purposes.

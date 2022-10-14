@@ -14,6 +14,7 @@ CLIENT_ID=your_spotify_client_id
 CLIENT_SECRET=your_spotify_client_secret
 SLSK_USER=your_soulseek_username
 SLSK_PASS=your_soulseek_password
+REDIRECT_HOST=local_ip
 ```
 
 Usage:

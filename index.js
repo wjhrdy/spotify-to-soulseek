@@ -7,7 +7,8 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SLSK_USER = process.env.SLSK_USER;
 const SLSK_PASS = process.env.SLSK_PASS;
-const REDIRECT_URI = 'http://localhost:3000/auth';
+const REDIRECT_HOST = process.env.REDIRECT_HOST;
+const REDIRECT_URI = `http://${REDIRECT_HOST}:3005/auth`;
 
 const playlistId = process.argv.slice(2)[0];
 const app = express();
@@ -55,8 +56,8 @@ app.get("/auth", (req, res, next) => {
   res.send("You have been authenticated and can close this tab!");
 })
 
-app.listen(3000, async () => {
-  console.log("listening on port 3000");
+app.listen(3005, async () => {
+  console.log("listening on port 3005");
   const authorizeURL = spotifyApi.createAuthorizeURL([], "state");
   await setupSlsk(SLSK_USER, SLSK_PASS);
   console.log("Please click this link: ", authorizeURL);

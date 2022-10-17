@@ -33,7 +33,7 @@ const downloadSong = async (songName) => {
         if(songToDownload) {
             console.log("downloading: ", songName);
             const fileName = songToDownload.file;
-            await download({ file: songToDownload, path: __dirname + `/downloads/${findSongName(fileName)}` });
+            await download({ file: songToDownload, path: `/data/slsk-downloads/${findSongName(fileName)}` });
             console.log("Download done: ", songName);
         }
         return Promise.resolve();

@@ -1,6 +1,5 @@
 const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
-const dotenv = require('dotenv').config();
 const {downloadSong, setupSlsk} = require('./downloadSong');
 
 const CLIENT_ID = process.env.CLIENT_ID;
@@ -29,12 +28,14 @@ const downloadSongs = async (songs) => {
 }
 
 const getPlaylistSongs = async () => {
+  const playlistName = await spotifyApi.getPlaylist(playlistId);
   const playlist = await spotifyApi.getPlaylistTracks(playlistId);
   const songs = [];
   for (track of playlist.body.items) {
     songs.push(track.track.artists[0].name + " " + track.track.name)
   }
-  console.log("Playlist found. We will try and download: ");
+  console.log(playlistName)
+  console.log(`Playlist found: $ We will try and download: `);
   console.log(songs);
   downloadSongs(songs);
 }
